@@ -1,0 +1,153 @@
+/* ─────────────────────────────────────────────────────────────────────
+   CashKaro Design System — Colors & Type
+   Source of truth: CashKaro DLS.fig (page /Colors, /Typography)
+   ───────────────────────────────────────────────────────────────────── */
+
+/* Webfonts ───────────────────────────────────────────────────────────── */
+/* Metropolis (Chris Simpson, free, SIL OFL) — the brand display+text face.
+   Loaded via CDNFonts which mirrors the full 18-style family in one stylesheet.
+   Manrope is kept as a graceful fallback in the cascade if the CDN is slow.
+   Montserrat / Racing Sans One are exact Google Fonts matches used in tags &
+   sale banners. */
+@import url("https://fonts.cdnfonts.com/css/metropolis-2");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&family=Racing+Sans+One&display=swap");
+
+:root {
+  /* ── Core brand ── */
+  --ck-blue:           #0036DA; /* CashKaro signature blue   */
+  --ck-blue-deep:      #2C40AA; /* shadows / pressed         */
+  --ck-blue-bg:        #F7F9FF; /* tinted card background    */
+  --ck-orange:         #FF6D1D; /* CK accent orange — CTAs   */
+  --ck-orange-soft:    #FF7E3E; /* lighter orange            */
+  --ck-orange-bg:      #FFF5ED; /* hero offer bg             */
+  --bk-ruby:           #DA2760; /* BuyKaro ruby red          */
+
+  /* ── Neutrals ── */
+  --neutral-0:         #FFFFFF;
+  --neutral-25:        #F7F9FF;
+  --neutral-50:        #F5F7F9;
+  --neutral-100:       #F1F1F1;
+  --neutral-150:       #E5E5E5;
+  --neutral-200:       #D9E3EC;
+  --neutral-300:       #D9D9D9;
+  --neutral-400:       #CECCCC;
+  --neutral-600:       #5C5C5C;
+  --neutral-700:       #323232;
+  --neutral-800:       #262626;
+  --neutral-900:       #1C1B1F;
+  --neutral-1000:      #060909;
+
+  /* ── Semantic ── */
+  --success:           #26A651;
+  --success-tint:      #44C194;
+  --error:             #D41000;
+  --warning:           #FED624;
+  --info:              #0036DA;
+
+  /* ── Accent palette (illustrations / tags) ── */
+  --purple:            #9747FF;
+  --purple-light:      #DDDCE7;
+  --teal:              #44C194;
+  --sky:               #C7E3FF;
+  --pink:              #E1A3AE;
+  --yellow:            #FED73E;
+
+  /* ── Foreground / background semantics ── */
+  --fg-1:              #262626;       /* primary text */
+  --fg-2:              #5C5C5C;       /* secondary    */
+  --fg-3:              #9A9A9A;       /* tertiary     */
+  --fg-inactive:       #5C5C5C;
+  --fg-on-blue:        #FFFFFF;
+  --fg-on-orange:      #FFFFFF;
+  --link:              #0036DA;
+
+  --bg-app:            #FFFFFF;
+  --bg-screen:         #F5F7F9;
+  --bg-card:           #FFFFFF;
+  --bg-hero:           #FFF5ED;
+  --bg-tinted:         #F7F9FF;
+
+  --border-subtle:     #D9E3EC;
+  --border-default:    #E5E5E5;
+
+  /* ── Elevation ── */
+  --shadow-card:        0 1px 2px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-sticky:      0 -4px 16px rgba(0,0,0,0.08);
+  --shadow-cta:         0 6px 14px rgba(44,64,170,0.28);
+  --shadow-press:       0 1px 2px rgba(0,0,0,0.10);
+  --shadow-toast:       0 8px 24px rgba(0,0,0,0.12);
+
+  /* ── Radii ── */
+  --r-xs:  4px;
+  --r-sm:  8px;
+  --r-md:  12px;
+  --r-lg:  16px;
+  --r-xl:  24px;
+  --r-pill: 999px;
+
+  /* ── Spacing scale (4-pt grid; mobile mostly 8/16/24) ── */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-7:  32px;
+  --sp-8:  40px;
+  --sp-9:  48px;
+  --sp-10: 64px;
+
+  /* ── Type families ── */
+  --font-display: "Metropolis", "Manrope", -apple-system, system-ui, sans-serif;
+  --font-text:    "Metropolis", "Manrope", -apple-system, system-ui, sans-serif;
+  --font-tag:     "Montserrat", "Metropolis", "Manrope", system-ui, sans-serif;     /* exclusivity tags */
+  --font-banner:  "Racing Sans One", "Metropolis", "Manrope", system-ui, sans-serif; /* sale banners */
+
+  /* ── Type tokens (px values from /Typography frames) ── */
+  --t-h1-size: 40px;  --t-h1-lh: 40px;  --t-h1-weight: 800; --t-h1-tracking: -0.03em;
+  --t-h2-size: 32px;  --t-h2-lh: 36px;  --t-h2-weight: 800; --t-h2-tracking: -0.025em;
+  --t-h3-size: 24px;  --t-h3-lh: 32px;  --t-h3-weight: 700; --t-h3-tracking: -0.02em;
+  --t-section-size: 16px; --t-section-lh: 24px; --t-section-weight: 800;
+  --t-body-size: 14px;    --t-body-lh: 20px;    --t-body-weight: 500;
+  --t-detail-size: 12px;  --t-detail-lh: 16px;  --t-detail-weight: 500;
+  --t-caption-size: 10px; --t-caption-lh: 12px; --t-caption-weight: 600;
+  --t-product-title-size: 14px; --t-product-title-weight: 600;
+  --t-product-price-size: 14px; --t-product-price-weight: 800;
+  --t-slashed-size: 14px; --t-slashed-weight: 400;
+  --t-textlink-size: 12px; --t-textlink-weight: 600;
+}
+
+/* Semantic type classes ─────────────────────────────────────────────── */
+.t-h1 { font-family: var(--font-display); font-size: var(--t-h1-size); line-height: var(--t-h1-lh); font-weight: var(--t-h1-weight); letter-spacing: var(--t-h1-tracking); color: var(--fg-1); }
+.t-h2 { font-family: var(--font-display); font-size: var(--t-h2-size); line-height: var(--t-h2-lh); font-weight: var(--t-h2-weight); letter-spacing: var(--t-h2-tracking); color: var(--fg-1); }
+.t-h3 { font-family: var(--font-display); font-size: var(--t-h3-size); line-height: var(--t-h3-lh); font-weight: var(--t-h3-weight); letter-spacing: var(--t-h3-tracking); color: var(--fg-1); }
+.t-section { font-family: var(--font-display); font-size: var(--t-section-size); line-height: var(--t-section-lh); font-weight: var(--t-section-weight); color: var(--fg-1); }
+.t-body { font-family: var(--font-text); font-size: var(--t-body-size); line-height: var(--t-body-lh); font-weight: var(--t-body-weight); color: var(--fg-1); }
+.t-body-2 { font-family: var(--font-text); font-size: var(--t-body-size); line-height: var(--t-body-lh); font-weight: var(--t-body-weight); color: var(--fg-2); }
+.t-detail { font-family: var(--font-text); font-size: var(--t-detail-size); line-height: var(--t-detail-lh); font-weight: var(--t-detail-weight); color: var(--fg-2); }
+.t-caption { font-family: var(--font-text); font-size: var(--t-caption-size); line-height: var(--t-caption-lh); font-weight: var(--t-caption-weight); color: var(--fg-1); }
+.t-textlink { font-family: var(--font-text); font-size: var(--t-textlink-size); line-height: 16px; font-weight: var(--t-textlink-weight); color: var(--link); }
+.t-product-title { font-family: var(--font-text); font-size: var(--t-product-title-size); font-weight: var(--t-product-title-weight); color: var(--fg-1); }
+.t-product-price { font-family: var(--font-display); font-size: var(--t-product-price-size); font-weight: var(--t-product-price-weight); color: var(--fg-1); }
+.t-product-slashed { font-family: var(--font-text); font-size: var(--t-slashed-size); font-weight: var(--t-slashed-weight); color: var(--fg-2); text-decoration: line-through; }
+.t-tag-exclusive { font-family: var(--font-tag); font-size: 9px; line-height: 13px; font-weight: 800; color: var(--fg-on-orange); letter-spacing: 0.02em; }
+
+/* Re-usable buttons (matches /Buttons specs) ───────────────────────── */
+.btn { font-family: var(--font-display); font-weight: 800; font-size: 16px; line-height: 1; border: 0; cursor: pointer; transition: transform .08s ease, box-shadow .12s ease, background-color .12s ease; }
+.btn-primary { background: var(--ck-blue); color: #fff; border-radius: var(--r-sm); padding: 16px 24px; }
+.btn-primary:hover { background: #002fbf; }
+.btn-primary:active { transform: scale(0.985); }
+.btn-primary:disabled { background: var(--ck-blue); opacity: .35; cursor: not-allowed; }
+.btn-pill { background: var(--ck-blue); color: #fff; border-radius: var(--r-pill); padding: 16px 40px; letter-spacing: -0.03em; }
+.btn-outline { background: transparent; color: var(--ck-blue); border: 1px solid var(--ck-blue); border-radius: var(--r-pill); padding: 15px 40px; }
+.btn-secondary { background: var(--ck-orange); color: #fff; border-radius: var(--r-sm); padding: 16px 24px; }
+.btn-textlink { background: transparent; color: var(--link); padding: 0; font-size: 12px; font-weight: 600; }
+
+/* Card shell ────────────────────────────────────────────────────────── */
+.card { background: var(--bg-card); border-radius: var(--r-md); box-shadow: var(--shadow-card); padding: 16px; }
+.card-flat { background: var(--bg-card); border-radius: var(--r-md); border: 1px solid var(--border-default); padding: 16px; }
+.card-hero { background: var(--bg-hero); border-radius: var(--r-sm); padding: 16px; }
+
+/* Page reset for prototypes ─────────────────────────────────────────── */
+.ck-reset { margin: 0; padding: 0; box-sizing: border-box; }
+.ck-reset *, .ck-reset *::before, .ck-reset *::after { box-sizing: border-box; }
